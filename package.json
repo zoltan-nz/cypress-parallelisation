@@ -1,0 +1,24 @@
+{
+  "name": "cypress-parallelisation",
+  "version": "1.0.0",
+  "description": "POC for experimenting with running Cypress parallel",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve app",
+    "test:serial": "time cypress run",
+    "test:parallel": "time concurrently 'npm:test:1' 'npm:test:2' 'npm:test:3' 'npm:test:4'",
+    "cypress:open": "cypress open",
+    "test:1": "cypress run --spec ./cypress/integration/1.spec.js",
+    "test:2": "cypress run --spec ./cypress/integration/2.spec.js",
+    "test:3": "cypress run --spec ./cypress/integration/3.spec.js",
+    "test:4": "cypress run --spec ./cypress/integration/4.spec.js",
+    "format": "prettier '{./*.md,./{tests,app}/**/*.{md,js,html}}' --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "cypress": "^3.4.0",
+    "serve": "^11.1.0"
+  }
+}

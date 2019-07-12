@@ -16,6 +16,9 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "lodash": ">=4.17.13"
+  },
   "devDependencies": {
     "concurrently": "^4.1.1",
     "cypress": "^3.4.0",
